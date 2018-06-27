@@ -6,7 +6,7 @@ pipeline {
                 build job: 'runHTTPD'
             }
         }
-        stage('Build Omnibus image'){
+        stage('Build Omnibus image 8.1.0.5'){
             steps{
                 build job: 'buildOmnibusImage'
             }
