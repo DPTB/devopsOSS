@@ -8,6 +8,7 @@ ARG INSTALL_TMP="/tmp/install"
 
 ENV NCHOME="/opt/IBM/tivoli/netcool" OMNIHOME="/opt/IBM/tivoli/netcool/omnibus" OBJSRV="NCOMS" OBJSRV_PORT="4100"
 
+#
 # Add dependencies
 RUN yum --setopt=tsflags=nodocs -y update && \
     yum --setopt=tsflags=nodocs -y install tar hostname unzip audit-libs fontconfig freetype compat-libstdc++-33.i686 glibc.i686 gtk2 libICE libSM libX11 libXau libXcursor libXext libXft libXmu libXp libXpm libXrender libXt libXtst libstdc++.i686 libgcc.i686 libjpeg-turbo libpng12 motif dejavu-fonts-common dejavu-sans-fonts expat glibc libgcc libidn libstdc++ libuuid libxcb nss-softokn-freebl pam zlib nss-softokn-freebl.i686 compat-libstdc++-33 && \
