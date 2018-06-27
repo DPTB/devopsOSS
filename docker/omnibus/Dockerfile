@@ -34,21 +34,6 @@ RUN cd /tmp/install && \
     rm -rf /home/netcool/var /home/netcool/IBM && \
     rm -rf /tmp/install
 
-
-
-
-RUN cd /tmp/install && \
-    echo "Installing from $INSTALL_SOURCE/$INSTALL_FILE_CORE" && \
-    curl -O "$INSTALL_SOURCE/$INSTALL_FILE_CORE" &&  unzip -q -d "$INSTALL_TMP/core" "$INSTALL_FILE_CORE" && \
-    echo "Installing from $INSTALL_SOURCE/$INSTALL_FILE_FP" && \
-    curl -O "$INSTALL_SOURCE/$INSTALL_FILE_FP" && unzip -q -d "$INSTALL_TMP/fp" "$INSTALL_FILE_FP" && \
-    cd "$INSTALL_TMP/core" && ./install_silent.sh "$INSTALL_TMP/core/scripts/install_all.xml" -acceptLicense && \
-    chmod +x /docker-entrypoint.sh && \
-# Optially remove Installation Manager stuff to lower image footprint
-    rm -rf /home/netcool/var /home/netcool/IBM && \
-    rm -rf /tmp/install
-
-
 VOLUME /db
 
 ENTRYPOINT /docker-entrypoint.sh
