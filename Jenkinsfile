@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('Run HTTP repo'){
             steps{
-                build job: 'runHTTP'
+                build job: 'runHTTPD'
             }
         }
     }
