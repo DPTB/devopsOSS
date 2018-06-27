@@ -1,4 +1,5 @@
 #!/bin/bash
+#
 
 #	script for building docker images	#
 
