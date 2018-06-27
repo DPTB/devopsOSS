@@ -8,7 +8,7 @@ pipeline {
         }
         stage('Build Omnibus image'){
             steps{
-                build job: 'buildOmnibusImage'
+                build job: 'buildOmnibusImageFP9'
             }
         }
     }
