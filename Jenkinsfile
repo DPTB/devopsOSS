@@ -6,6 +6,11 @@ pipeline {
                 build job: 'runHTTPD'
             }
         }
+        stage('Build Omnibus image'){
+            steps{
+                build job: 'buildOmnibusImage'
+            }
+        }
     }
 }
 
