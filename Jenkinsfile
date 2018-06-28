@@ -16,6 +16,11 @@ pipeline {
                 build job: 'runObjectServer'
             }
         }
+        stage('Run testing'){
+            steps{
+                build job: 'TestEnvironment'
+            }
+        }
     }
 }
 

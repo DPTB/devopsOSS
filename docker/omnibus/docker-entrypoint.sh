@@ -10,4 +10,5 @@ then
 fi
 
 ln -s /db/$OBJSRV $OMNIHOME/db/$OBJSRV
-setarch $(arch) --uname-2.6 $OMNIHOME/bin/nco_objserv -logfileusestderr -name $OBJSRV  -logfileusestderr -messagelog stdout $OBJSRV_EXTRA
+setarch $(arch) --uname-2.6 $OMNIHOME/bin/nco_objserv -logfileusestderr -name $OBJSRV  -logfileusestderr -messagelog stdout $OBJSRV_EXTRA &
+setarch $(arch) --uname-2.6 /opt/IBM/tivoli/netcool/omnibus/probes/nco_p_simnet
