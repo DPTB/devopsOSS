@@ -8,7 +8,7 @@ pipeline {
         }
         stage('Build Omnibus image 8.1.0.9'){
             steps{
-                build job: 'buildOmnibusImageFP9'
+                build job: 'buildOmnibusImage'
             }
         }
         stage('Run Omnibus image 8.1.0.9'){
