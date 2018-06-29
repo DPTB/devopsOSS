@@ -27,6 +27,7 @@ an OSS environment.
 
 3)
 	- run 2 or 3 different container using both 8.1.0.5 and 8.1.0.9 images
+	- create new branch git checkout -b rules 1.2
 	- show branches in github
 	- show container info in kinematic
 	- more? 
