@@ -14,24 +14,20 @@ an OSS environment.
 	- show running container and output
 
 2)
- 	- checkout branch "Omnibus 8.1.0.5-prod" 	
-	- visualize changes in Jenkinsfile (conditional approval of deployment to production)
+	- stop and remove repo container
+ 	- checkout branch "Omnibus 8.1.0.9" 	
+	- visualize changes in Jenkinsfile 
+	- modify simnet.rules file and add new version
+	- commit branch Omnibus 8.1.0.9 and push
 	- checkout master branch
-	- merge  Omnibus 8.1.0.5-prod into master
-	- commit
-	- visualize changes in Jenkinsfile
+	- merge  Omnibus 8.1.0.9 into master
+	- commit and push
 	- run master branch
 	- show status, logs, images, container and output
-
-3)
-	- checkout branch "Omnibus 8.1.0.9"
-	- visualize changes in Jenkinsfile (this time we are installing FP9)
-	- checkout master branch
-	- merge Omnibus 8.1.0.9 into master branch
-	- run
-	- As above
 
 4)	
 	- revert master branch
 	- run and verify revert
+	- run build
+	- verify log etc etc
 	
