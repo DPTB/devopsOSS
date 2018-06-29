@@ -25,8 +25,13 @@ an OSS environment.
 	- run master branch
 	- show status, logs, images, container and output
 
-4)	
+3)
+	- run 2 or 3 different container using both 8.1.0.5 and 8.1.0.9 images
+	- 
+
+4)	optional	
 	- revert master branch
+	- change Jenkinsfile back to initial build (remove fp9)
 	- run and verify revert
 	- run build
 	- verify log etc etc
