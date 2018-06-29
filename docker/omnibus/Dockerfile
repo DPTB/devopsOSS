@@ -25,8 +25,6 @@ RUN mkdir -p $NCHOME "$INSTALL_TMP/core" "$INSTALL_TMP/fp" && \
 USER netcool
 
 # Perform installation
-
-# Perform installation
 RUN cd /tmp/install && \
     echo "Installing from $INSTALL_SOURCE/$INSTALL_FILE_CORE" && \
     curl -O "$INSTALL_SOURCE/$INSTALL_FILE_CORE" &&  unzip -q -d "$INSTALL_TMP/core" "$INSTALL_FILE_CORE" && \
@@ -35,10 +33,11 @@ RUN cd /tmp/install && \
     cd "$INSTALL_TMP/core" && ./install_silent.sh "$INSTALL_TMP/core/scripts/install_all.xml" -acceptLicense && \
     sed -i -e 's/update/install/' "$INSTALL_TMP/fp/scripts/update_omnibus.xml" && \
     cd "$INSTALL_TMP/fp" && ./update_silent.sh "$INSTALL_TMP/fp/scripts/update_omnibus.xml" acceptLicense && \
-    chmod +x /docker-entrypoint.sh && \
+    chmod +x /docker-entrypoint.sh && \ 
 # Optially remove Installation Manager stuff to lower image footprint
     rm -rf /home/netcool/var /home/netcool/IBM && \
     rm -rf /tmp/install
+
 
 
 COPY simnet.rules "/opt/IBM/tivoli/netcool/omnibus/probes/linux2x86/"

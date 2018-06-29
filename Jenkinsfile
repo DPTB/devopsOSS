@@ -26,7 +26,7 @@ pipeline {
                 timeout(time:5, unit:'DAYS'){
                     input message:'Approve PRODUCTION deployment'
                 }
-                build job: 'TestEnvironment'
+                build job: 'TestEnvironmentFP9'
             }
             post{
                 success {
