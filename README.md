@@ -17,7 +17,7 @@ an OSS environment.
 	- stop and remove repo container
  	- checkout branch "Omnibus 8.1.0.9" 	
 	- visualize changes in Jenkinsfile 
-	- modify simnet.rules file and add new version
+	- modify simnet.rules file and add new version or some rules file changes
 	- commit branch Omnibus 8.1.0.9 and push
 	- checkout master branch
 	- merge  Omnibus 8.1.0.9 into master
@@ -27,7 +27,9 @@ an OSS environment.
 
 3)
 	- run 2 or 3 different container using both 8.1.0.5 and 8.1.0.9 images
-	- 
+	- show branches in github
+	- show container info in kinematic
+	- more? 
 
 4)	optional	
 	- revert master branch
