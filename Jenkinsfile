@@ -18,7 +18,28 @@ pipeline {
         }
         stage('Testing dev object server and probe'){
             steps{
-                build job: 'TestEnvironmentFP9'
+                build job: 'TestEnvironment'
+            }
+        }
+       stage('Deploy to production'){
+            steps{
+                timeout(time:5, unit:'DAYS'){
+                    input message:'Approve PRODUCTION deployment'
+                }
+                build job: 'TestEnvironment'
+            }
+            post{
+                success {
+                    echo "Code deployed to production"
+                }
+                failure {
+                    echo "Deployment failed"
+                }
+            }
+        }
+        stage('Testing dev object server and probe'){
+            steps{
+                build job: 'TestEnvironment'
             }
         }
        stage('Deploy to production'){
