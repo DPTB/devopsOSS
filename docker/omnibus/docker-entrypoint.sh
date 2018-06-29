@@ -1,6 +1,6 @@
 #!/bin/sh
 
-echo -e "[$OBJSRV]\n{\n\tPrimary: 0.0.0.0 $OBJSRV_PORT\n}\n$OMNIDAT_EXTRA" >$NCHOME/etc/omni.dat
+echo -e "[$OBJSRV]\n{\n\tPrimary: 0.0.0.0  $OBJSRV_PORT\n}\n$OMNIDAT_EXTRA" >$NCHOME/etc/omni.dat
 
 setarch $(arch) --uname-2.6 $NCHOME/bin/nco_igen
 if [ ! -e "/db/.initialized" ];
@@ -10,4 +10,5 @@ then
 fi
 
 ln -s /db/$OBJSRV $OMNIHOME/db/$OBJSRV
-setarch $(arch) --uname-2.6 $OMNIHOME/bin/nco_objserv -logfileusestderr -name $OBJSRV  -logfileusestderr -messagelog stdout $OBJSRV_EXTRA
+nohup setarch $(arch) --uname-2.6 $OMNIHOME/bin/nco_objserv -logfileusestderr -name $OBJSRV  -logfileusestderr -messagelog stdout $OBJSRV_EXTRA &
+setarch $(arch) --uname-2.6 /opt/IBM/tivoli/netcool/omnibus/probes/nco_p_simnet
