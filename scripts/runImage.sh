@@ -26,6 +26,6 @@ fi
 
 echo "running image ${1}"
 
-$DOCKER_BIN  run -dit --name $1 -p $2 -v $3 $4
+$DOCKER_BIN  run -dit --name $1 -p $2 -v $3 $4 --name $5
 
 ##docker run -dit --name web -p 80:80 -v "/Users/tbodp/myWork/GitHub/devopsOSS/docker/alpine-httpd/httpd":/usr/local/apache2/htdocs/ httpd:alpine

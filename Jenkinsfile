@@ -16,7 +16,7 @@ pipeline {
                 build job: 'runObjectServer'
             }
         }
-        stage('Run testing'){
+        stage('Testing dev object server and probe'){
             steps{
                 build job: 'TestEnvironment'
             }
