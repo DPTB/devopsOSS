@@ -39,8 +39,6 @@ RUN cd /tmp/install && \
     rm -rf /home/netcool/var /home/netcool/IBM && \
     rm -rf /tmp/install
 
-
-
 COPY simnet.rules "/opt/IBM/tivoli/netcool/omnibus/probes/linux2x86/"
 COPY os-test.sh "/opt/IBM/tivoli/netcool/omnibus/bin/"
 
