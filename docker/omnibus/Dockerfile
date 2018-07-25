@@ -1,7 +1,7 @@
 FROM centos:7
 MAINTAINER Julius Loman <lomo@kyberia.net>
 
-ARG INSTALL_SOURCE="http://localhost" 
+ARG INSTALL_SOURCE="http://192.168.0.4" 
 ARG INSTALL_FILE_CORE="OMNIbus-v8.1.0.5-Core.linux64.zip"
 ARG INSTALL_FILE_FP="8.1.0-TIV-NCOMNIbus-Linux-FP0009.zip"
 ARG INSTALL_TMP="/tmp/install"
