@@ -6,14 +6,14 @@ pipeline {
                 build job: 'runHTTPD'
             }
         }
-        stage('Build Omnibus image 8.1.0.9'){
+        stage('Build Omnibus image 8.1.0.5'){
             steps{
-                build job: 'buildOmnibusImageFP9'
+                build job: 'buildOmnibusImage'
             }
         }
-        stage('Run Omnibus image 8.1.0.9'){
+        stage('Run Omnibus image 8.1.0.5'){
             steps{
-                build job: 'runObjectServerFP9'
+                build job: 'runObjectServer'
             }
         }
         stage('Testing dev object server and probe'){
